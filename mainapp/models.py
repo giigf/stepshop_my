@@ -71,6 +71,8 @@ class Product(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True
     )
+    def __str__(self):
+        return self.name or f'Категория c id - {self.pk}'
     class Meta:
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'
